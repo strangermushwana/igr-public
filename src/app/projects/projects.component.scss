@@ -1,0 +1,10 @@
+.gray-scale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+
+.gray-scale:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}

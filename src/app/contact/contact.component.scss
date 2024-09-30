@@ -1,0 +1,40 @@
+select {
+  -webkit-appearance: none; /* Removes translucent background */
+  -moz-appearance: none;    /* For Firefox */
+  appearance: none;
+}
+
+/* Style the arrow separately */
+select::-ms-expand {
+  display: none; /* Hide the dropdown arrow for IE */
+}
+
+/* Add a custom dropdown arrow */
+select {
+  background-image: url('../../assets/icons8-down-24.png'); /* Add a custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Add space for the custom arrow */
+}
+
+/* Remove arrows in WebKit browsers (Chrome, Safari, etc.) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+.disabled-btn {
+  background-color: gray;
+  color: gainsboro;
+  pointer-events: none;
+}

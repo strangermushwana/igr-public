@@ -1,0 +1,371 @@
+<div class="flex flex-col mx-auto px-4 lg:px-0 mt-10 max-w-[45rem]">
+  <h2 class="text-white uppercase font-semibold text-xl mb-[3rem]">Projects</h2>
+  <div>
+    <a
+      href="https://www.behance.net/imaginegreater"
+      target="_blank"
+      class="uppercase text-[14px] text-[#F26422] bg-[#2B2B2B] px-10 py-3 rounded-full hover:scale-105 hover:text-white transition duration-300 ease-in-out mb-8"
+    >
+      View All
+    </a>
+  </div>
+</div>
+
+<div
+  class="flex items-end max-w-[70rem] px-4 lg:px-1 justify-end space-x-10 text-white"
+>
+  <span class="cursor-pointer">
+    <img
+      class="w-[2rem] hover:scale-105"
+      src="../../../assets/arr-left.png"
+      alt="arrow left"
+      (click)="move('left')"
+    />
+  </span>
+  <span class="cursor-pointer">
+    <img
+      class="w-[2rem] hover:scale-105"
+      src="../../../assets/arr-right.png"
+      alt="arrow right"
+      (click)="move('next')"
+    />
+  </span>
+</div>
+
+<div class="overflow-hidden">
+  <div
+    class="flex projects items-end justify-center space-x-4 mt-[6rem] animate-scroll"
+  >
+    <!-- The duplication here can be avoided by checking the screen dimensions -->
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a href="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a href="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a href="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <!-- First set of images -->
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[0].link" target="_blank">
+        <img
+          [src]="imageArr[0].image"
+          class="gray-scale object-fill"
+          alt="img 1"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[1].link" target="_blank">
+        <img
+          [src]="imageArr[1].image"
+          class="gray-scale object-fill"
+          alt="img 2"
+        />
+      </a>
+    </div>
+    <div class="box min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[2].link" target="_blank">
+        <img
+          [src]="imageArr[2].image"
+          class="gray-scale object-fill"
+          alt="img 3"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[3].link" target="_blank">
+        <img
+          [src]="imageArr[3].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[4].link" target="_blank">
+        <img
+          [src]="imageArr[4].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+    <div class="min-w-[15rem] min-h-[15rem]">
+      <a [href]="imageArr[5].link" target="_blank">
+        <img
+          [src]="imageArr[5].image"
+          class="gray-scale object-fill"
+          alt="img 4"
+        />
+      </a>
+    </div>
+  </div>
+</div>

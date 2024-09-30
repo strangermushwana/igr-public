@@ -1,0 +1,57 @@
+.gray-scale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+
+.gray-scale:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+
+.product-item-content {
+  border: 1px solid var(--surface-d);
+  border-radius: 3px;
+  margin: 0.3rem;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: snow;
+}
+
+.product-image {
+  width: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.drop-down {
+  transition: 0.25s ease-out;
+}
+
+.drop-down-fast {
+  transition: 0.5s ease-in-out;
+}
+
+h3 {
+  color:red;
+  text-align: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+.pro:hover .projects {
+  animation-play-state: paused;
+}
+
+.projects {
+  animation: 50s slide infinite linear;
+}

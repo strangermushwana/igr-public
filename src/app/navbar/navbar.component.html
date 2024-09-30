@@ -1,0 +1,147 @@
+<nav
+  class="container mx-auto px-6 pt-10 lg:pt-3 z-[3000] bottom-0 overflow-hidden"
+>
+  <div
+    class="mx-auto flex text-sm justify-between text-center max-w-[90rem] lg:py-6"
+  >
+    <a
+      href="javascript:void(0)"
+      (click)="navigate('')"
+      class="animate-fadeInUpFaster"
+    >
+      <img
+        src="../../assets/ign.svg"
+        alt="Logo"
+        class="logo w-[3.5rem] md:w-[4.5rem]"
+      />
+    </a>
+    <div class="hidden lg:flex space-x-32 lg:items-center text-left">
+      <!-- Links -->
+      <a
+        href="javascript:void(0)"
+        (click)="navigate('about')"
+        [ngStyle]="{ 'padding-bottom': path === 'about' ? '18px' : '' }"
+      >
+        <span
+          class="font-semibold block"
+          [ngStyle]="{
+            'border-bottom': path === 'about' ? '3px #F26422 solid' : ''
+          }"
+          >About Us</span
+        >
+        <small *ngIf="path !== 'about'" class="text-right text-gray-400"
+          >Why us</small
+        >
+      </a>
+
+      <a
+        href="javascript:void(0)"
+        (click)="navigate('projects')"
+        [ngStyle]="{ 'padding-bottom': path === 'projects' ? '18px' : '' }"
+      >
+        <span
+          class="font-semibold block"
+          [ngStyle]="{
+            'border-bottom': path === 'projects' ? '3px #F26422 solid' : ''
+          }"
+          >Projects</span
+        >
+        <small *ngIf="path !== 'projects'" class="text-right text-gray-400"
+          >Our work</small
+        >
+      </a>
+      <a
+        href="javascript:void(0)"
+        (click)="navigate('services')"
+        [ngStyle]="{ 'padding-bottom': path === 'services' ? '18px' : '' }"
+      >
+        <span
+          class="font-semibold block"
+          [ngStyle]="{
+            'border-bottom': path === 'services' ? '3px #F26422 solid' : ''
+          }"
+          >Services</span
+        >
+        <small *ngIf="path !== 'services'" class="text-right text-gray-400"
+          >What we do</small
+        >
+      </a>
+      <a
+        href="javascript:void(0)"
+        (click)="navigate('contact')"
+        [ngStyle]="{ 'padding-bottom': path === 'contact' ? '18px' : '' }"
+      >
+        <span
+          class="font-semibold block"
+          [ngStyle]="{
+            'border-bottom': path === 'contact' ? '3px #F26422 solid' : ''
+          }"
+          >Contact Us</span
+        >
+        <small *ngIf="path !== 'contact'" class="text-right text-gray-400"
+          >Hire us</small
+        >
+      </a>
+    </div>
+    <button
+      (click)="toggleMenu()"
+      id="menu-btn"
+      class="block lg:hidden my-auto focus:outline-none hamburger z-[3001]"
+    >
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="menu"
+    class="fixed top-[10px] inset-0 hidden flex-col space-y-16 font-bold items-center self-end w-full h-full px-10 py-1 pt-24 pb-4 tracking-widest text-white uppercase opacity-[0.92] bg-black z-[3000]"
+  >
+    <div class="w-full py-3 text-center">
+      <a
+        (click)="nvg('about')"
+        href="javascript:void(0)"
+        class="block hover:text-red-50"
+        >About Us
+        <small class="font-semibold block text-[8px] text-gray-400"
+          >Why us</small
+        ></a
+      >
+    </div>
+    <div class="w-full py-3 text-center">
+      <a
+        (click)="nvg('projects')"
+        href="javascript:void(0)"
+        class="block hover:text-red-50"
+        >Projects
+        <small class="font-semibold block text-[8px] text-gray-400"
+          >Our work</small
+        ></a
+      >
+    </div>
+    <div class="w-full py-3 text-center">
+      <a
+        (click)="nvg('services')"
+        href="javascript:void(0)"
+        class="block hover:text-red-50"
+        >Services
+        <small class="font-semibold block text-[8px] text-gray-400"
+          >What we do</small
+        ></a
+      >
+    </div>
+    <div class="w-full py-3 text-center">
+      <a
+        (click)="nvg('contact')"
+        href="javascript:void(0)"
+        class="block hover:text-red-50"
+        >Contact Us
+        <small class="font-semibold block text-[8px] text-gray-400"
+          >Hire us</small
+        ></a
+      >
+    </div>
+  </div>
+</nav>

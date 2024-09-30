@@ -1,0 +1,14 @@
+<div [ngClass]="{ fixed: navActive }">
+  <section
+    id="main-bg"
+    class="bg-cover bg-no-repeat"
+    [ngStyle]="{ 'background-image': 'url(' + initBackground() + ')' }"
+  >
+    <div id="main-nav" class="sticky top-0 z-[3000]">
+      <app-navbar (messageEvent)="handleEvent($event)"></app-navbar>
+    </div>
+    <div class="overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</div>

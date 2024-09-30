@@ -1,0 +1,214 @@
+<div
+  class="flex flex-col-reverse justify-center md:flex-row md:mx-20 md:pt-[8rem] py-10 lg:py-0 lg:px-5 lg:pt-[12rem] lg:mx-auto max-w-[70rem]"
+>
+  <div class="md:w-1/2 px-6 md:px-0 text-center lg:text-left">
+    <h2
+      class="flex justify-center lg:mt-0 text-white uppercase font-bold text-xl lg:text-4xl mb-[1.5rem] animate-fadeInUpSlower"
+    >
+      Your Partner of Choice for End-to-End Motion Design Solutions
+    </h2>
+    <div
+      class="flex justify-center lg:justify-start text-sm md:text-lg text-white animate-fadeInUpLower"
+    >
+      Let's collaborate, let’s tell stories
+    </div>
+  </div>
+  <div class="w-1/2 relative hidden md:flex">
+    <img
+      src="../../assets/Sculpture.png"
+      class="lg:relative object-contain mb-[4rem] pr-[2rem] lg:right-[4rem] scale-[1.5] md:scale-[2]"
+      alt="sculpture"
+    />
+  </div>
+</div>
+
+<div
+  class="max-w-[70rem] mx-auto pt:5rem md:pt-[8rem] lg:px-5 lg:pt-[12rem] text-left"
+>
+  <div
+    class="flex flex-col-reverse lg:flex-row items-start md:items-center lg:items-start text-white"
+  >
+    <div
+      class="w-full flex flex-col md:flex-row lg:flex-col md:justify-around lg:justify-between md:max-w-[60rem] md:mb-10 md:px-[3rem] lg:px-0 mx-auto items-start lg:w-[40%] px-10 pb-10 md:p-0"
+    >
+      <div class="contacts">
+        <h2
+          class="flex justify-start text-white uppercase font-bold text-xl mb-3"
+        >
+          CONTACTS
+        </h2>
+        <div class="flex text-lg flex-col space-y-3">
+          <small>comms&#64;imaginegreater.co.za</small>
+          <small>+27 (71) 871-6355</small>
+          <div class="flex flex-col">
+            <small>411 Main Ave, Ferndale</small>
+            <small>JHB, South Africa</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="socials">
+        <h2
+          class="flex justify-start mt-[3rem] text-white uppercase font-bold text-xl mb-[2rem]"
+        >
+          The socials
+        </h2>
+        <div class="flex space-x-10 items-center max-w-[70rem] mx-auto">
+          <a
+            href="https://www.behance.net/imaginegreater"
+            class="hover:scale-125"
+            target="_blank"
+            ><img class="h-6" src="../../assets/behance.png" alt="behance"
+          /></a>
+          <a
+            href="https://vimeo.com/imaginegreater"
+            class="hover:scale-125"
+            target="_blank"
+          >
+            <img class="h-6" src="../../assets/vimeo.png" alt="vimeo" />
+          </a>
+          <a
+            href="https://www.instagram.com/imaginegreatercc/"
+            class="hover:scale-125"
+            target="_blank"
+          >
+            <img class="h-6" src="../../assets/instagram.png" alt="instagram" />
+          </a>
+          <a
+            href="https://za.linkedin.com/company/imaginegreater"
+            target="_blank"
+            class="hover:scale-125"
+          >
+            <img class="h-6" src="../../assets/linkedin.png" alt="linkedin" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-[70%] lg:w-[60%] p-10 md:p-0 text-left lg:mt-0">
+      <h2 class="flex justify-start text-white uppercase font-bold text-lg">
+        Have an idea?
+      </h2>
+      <div class="flex flex-col">
+        <small class="texl-lg">Drop a few words and let's have a chat.</small>
+        <!-- <div *ngIf="done" class="texl-lg text-green-500 my-3">
+          Your information had been submitted. A member of our team will get in
+          touch with you very soon.
+        </div> -->
+      </div>
+      <form [formGroup]="contactForm">
+        <div
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-5 mt-[2rem]"
+        >
+          <input
+            type="text"
+            [ngClass]="{ 'is-invalid': submitted && f['fullName'].errors }"
+            formControlName="fullName"
+            class="border text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+            formControlName="email"
+            class="border text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Email"
+          />
+        </div>
+        <div
+          class="flex mt-[1.2rem] flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-5"
+        >
+          <input
+            type="number"
+            formControlName="phoneNumber"
+            [ngClass]="{ 'is-invalid': submitted && f['phoneNumber'].errors }"
+            class="border text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Phone Number"
+          />
+          <select
+            id="enquiries"
+            formControlName="enquiryType"
+            [ngClass]="{ 'is-invalid': submitted && f['enquiryType'].errors }"
+            class="border rounded-none text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+          >
+            <option value="" disabled selected>Type of enquiry</option>
+            <option value="New Business">New business</option>
+            <option value="General">General enquiry</option>
+            <option value="Job Opportunity">Job opportunity</option>
+          </select>
+        </div>
+        <div
+          class="flex mt-[1.2rem] flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5"
+        >
+          <input
+            type="text"
+            formControlName="company"
+            [ngClass]="{ 'is-invalid': submitted && f['company'].errors }"
+            class="border text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Company"
+          />
+          <input
+            type="text"
+            formControlName="position"
+            [ngClass]="{ 'is-invalid': submitted && f['position'].errors }"
+            class="border text-sm w-full p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Position"
+          />
+        </div>
+        <div class="mt-6">
+          <textarea
+            rows="6"
+            formControlName="message"
+            [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"
+            class="border w-full text-sm p-3 lg:p-4 outline-none border-1 bg-transparent placeholer-gray-800"
+            placeholder="Tell us a little about your project"
+          ></textarea>
+        </div>
+        <div class="my-[1rem] text-md">
+          <small
+            >By submitting this form you agree to our
+            <span class="block underline cursor-pointer"
+              >privacy policy</span
+            ></small
+          >
+        </div>
+        <div class="mt-[2rem] w-full">
+          <button
+            [disabled]="isLoading"
+            [ngClass]="{ 'disabled-btn': isLoading }"
+            (click)="onSubmit()"
+            class="uppercase text-[14px] w-full text-[#F26422] bg-[#2B2B2B] px-10 py-3 rounded-full hover:scale-105 hover:text-white transition duration-300 ease-in-out mb-8"
+          >
+            <span *ngIf="isLoading">Sending...</span>
+            <span *ngIf="!isLoading"> Submit</span>
+          </button>
+        </div>
+      </form>
+
+      <div
+        *ngIf="isModalOpen"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      >
+        <div
+          class="bg-white text-gray-600 p-6 rounded-lg shadow-lg w-full max-w-md text-center"
+        >
+          <h2 class="text-2xl font-bold mb-4">Thank You!</h2>
+          <p class="my-3">
+            Your information had been submitted. A member of our team will get
+            in touch with you very soon.
+          </p>
+          <button
+            (click)="closeModal()"
+            class="uppercase text-[14px] w-fit text-[#F26422] bg-[#2B2B2B] px-10 py-3 rounded-full hover:scale-105 hover:text-white transition duration-300 ease-in-out mb-8"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pb-8 mt-6 px-[3rem]">
+  <app-footer></app-footer>
+</div>
